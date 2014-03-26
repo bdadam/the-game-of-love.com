@@ -1,0 +1,24 @@
+---
+layout: base.hbs
+---
+<div class="body">
+    <div class="container">
+        <h1>{{ page.data.title }}</h1>
+
+        {{# markdown }}{{ body }}{{/ markdown }}
+
+        {{#if page.data.songs}}
+            <h2>More songs...</h2>
+            <div class="more-videos">
+                {{#each page.data.songs}}
+                    <a href="#" class="video" data-video-url="{{ url }}">
+                        <span class="title"> {{ title }} </span>
+                    </a>
+                {{/each}}
+            </div>
+        {{/if}}
+
+        {{> footer }}
+    </div>
+</div>
+{{> nav }}
