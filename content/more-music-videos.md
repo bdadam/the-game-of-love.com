@@ -1,6 +1,6 @@
 ---
     title:          More music about game and love and the game of love
-    description:
+    description:    Music videos which are about love, love game and the game of love
 
     songs:
     - title: The Cardigans - My Favourite Game

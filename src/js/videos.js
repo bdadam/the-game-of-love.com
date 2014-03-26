@@ -2,6 +2,7 @@ define(function() {
     function parseYoutubeUrl(url){
         //http://stackoverflow.com/a/9102270
 
+        url = url || '';
         var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
         var match = url.match(regExp);
         if (match&&match[2].length==11){
@@ -47,6 +48,10 @@ define(function() {
     var moreVideos = Array.prototype.slice.apply(document.querySelectorAll('.more-videos a.video'));
     moreVideos.forEach(function(videoItem) {
         var url = videoItem.getAttribute('data-video-url');
+
+        if (!url ) {
+            return;
+        }
 
         var id = parseYoutubeUrl(url);
 

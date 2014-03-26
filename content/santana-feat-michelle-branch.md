@@ -36,7 +36,7 @@ This song was originally recorded with Tina Turner, but this version got only re
 The music video depicts Santana and Branch in an alley with couples around them, each expressing their love for one another.
 The director was Paul Fedor and the video was filmed in the Pilsen neighborhood of Chicago.
 
-Source: [Wikipedia](http://en.wikipedia.org/wiki/The_Game_of_Love_(song)
+Source: [Wikipedia](<http://en.wikipedia.org/wiki/The_Game_of_Love_%28song%29)
 
 ## Lyrics
 <pre>

@@ -1,6 +1,8 @@
 ---
 layout: base.hbs
 ---
+<a class="to-navigation" href="#navigation">Navigation</a>
+
 <div class="body">
     <div class="container">
         <h1>{{ page.data.title }}</h1>
@@ -14,6 +16,18 @@ layout: base.hbs
         {{#if page.data.songs}}
             <h2>{{ page.data.more_songs_title }}</h2>
             <div class="more-videos">
+                {{#ifCond page.filename '===' 'index.html'}}
+                    <a href="/santana-feat-michelle-branch.html#dnboInNJzoE" class="video" style="background-image: url(http://i1.ytimg.com/vi/dnboInNJzoE/hqdefault.jpg);">
+                        <span class="title">Santana feat Michelle Branch - The Game of Love</span>
+                    </a>
+                    <a href="/daft-punk.html#MZ1vdnW0mtQ" class="video" style="background-image: url(http://i1.ytimg.com/vi/MZ1vdnW0mtQ/hqdefault.jpg);">
+                        <span class="title">Daft Punk - The Game of Love</span>
+                    </a>
+                    <a href="/wayne-fontana-and-the-mindbenders.html#D-weeowZvvc" class="video" style="background-image: url(http://i1.ytimg.com/vi/D-weeowZvvc/hqdefault.jpg);">
+                        <span class="title">Wayne Fontana and The Mindbreaers - The Game of Love</span>
+                    </a>
+                {{/ifCond}}
+
                 {{#each page.data.songs}}
                     <a href="#" class="video" data-video-url="{{ url }}">
                         <span class="title"> {{ title }} </span>
@@ -23,6 +37,11 @@ layout: base.hbs
         {{/if}}
 
         {{# markdown }}{{ body }}{{/ markdown }}
+
+        <p class="legal">
+            Videos and song lyrics are property and copyright of their owners. They are only provided for educational purposes.
+            Videos shown here are all listed on Youtube.
+        </p>
     </div>
 </div>
 {{> nav }}

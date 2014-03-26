@@ -1,0 +1,39 @@
+.body {
+  padding: 0 20px;
+}
+@media screen and (min-width: 900px) {
+  .body {
+    padding: 0;
+  }
+
+  .to-navigation {
+    display: none;
+  }
+
+  .container {
+    padding: 0 32px 60px;
+    max-width: 800px;
+  }
+
+  nav {
+    position: fixed;
+    width: 300px;
+    left: 0;
+    top: 0;
+    height: 100%;
+  }
+
+  .body {
+    padding-left: 300px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  nav {
+    width: 400px;
+  }
+
+  .body {
+    padding-left: 400px;
+  }
+}

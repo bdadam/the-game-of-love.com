@@ -46,6 +46,9 @@ module.exports = function(grunt) {
         },
 
         uncss: {
+            options: {
+                ignore: /\.selected/
+            },
             dist: {
                 files: {
                     'dist/static/main.css': ['dist/**/*.html']
@@ -101,7 +104,7 @@ module.exports = function(grunt) {
 
             less: {
                 files: ['src/**/*.less'],
-                tasks: ['less', 'uncss', 'hashres']
+                tasks: ['less', 'hashres']
             },
 
             requirejs: {
@@ -116,7 +119,7 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('build', ['clean', 'assemble', 'less', 'uncss', 'requirejs', 'hashres']);
+    grunt.registerTask('build', ['clean', 'assemble', 'less', 'requirejs', 'hashres']);
     grunt.registerTask('default', ['build', 'connect', 'watch']);
 
     grunt.loadNpmTasks('assemble');
