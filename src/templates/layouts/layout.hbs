@@ -5,10 +5,14 @@ layout: base.hbs
     <div class="container">
         <h1>{{ page.data.title }}</h1>
 
-        {{# markdown }}{{ body }}{{/ markdown }}
+        {{#if page.data.song_embed_url}}
+            <div class="video-container">
+                <iframe src="{{ page.data.song_embed_url }}?modestbranding=1&showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        {{/if}}
 
         {{#if page.data.songs}}
-            <h2>More songs...</h2>
+            <h2>{{ page.data.more_songs_title }}</h2>
             <div class="more-videos">
                 {{#each page.data.songs}}
                     <a href="#" class="video" data-video-url="{{ url }}">
@@ -18,7 +22,7 @@ layout: base.hbs
             </div>
         {{/if}}
 
-        {{> footer }}
+        {{# markdown }}{{ body }}{{/ markdown }}
     </div>
 </div>
 {{> nav }}
